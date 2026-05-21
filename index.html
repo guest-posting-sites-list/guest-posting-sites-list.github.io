@@ -207,10 +207,19 @@ color:#2563eb;
 margin-bottom:10px;
 }
 
+/* BLOG SECTION FIXED */
+
 .blogs{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
+margin-top:40px;
+}
+
+.blog-link{
+text-decoration:none;
+color:inherit;
+display:block;
 }
 
 .blog{
@@ -219,6 +228,7 @@ border-radius:16px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,0.06);
 transition:0.3s;
+height:100%;
 }
 
 .blog:hover{
@@ -229,6 +239,7 @@ transform:translateY(-6px);
 width:100%;
 height:220px;
 object-fit:cover;
+display:block;
 }
 
 .blog-content{
@@ -307,6 +318,16 @@ font-size:14px;
 color:#94a3b8;
 }
 
+/* MOBILE RESPONSIVE */
+
+@media(max-width:992px){
+
+.blogs{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 @media(max-width:768px){
 
 .hero h1{
@@ -334,14 +355,9 @@ margin:8px 10px;
 .section-title{
 font-size:32px;
 }
-  .blog-link{
-text-decoration:none;
-color:inherit;
-display:block;
-}
 
-.blog-link:hover .blog{
-transform:translateY(-6px);
+.blogs{
+grid-template-columns:1fr;
 }
 
 }
@@ -546,14 +562,20 @@ Affordable guest posting platform for SEO professionals and businesses.
 
 <div class="container">
 
+<section class="section">
+
+<div class="container">
+
 <h2 class="section-title">
 Latest SEO Blog Posts
 </h2>
 
 <div class="blogs">
- 
-  <a href="https://www.guest-posting-sites.com/blog/" target="_blank" class="blog-link">
-   
+
+<!-- BLOG 1 -->
+
+<a href="https://www.guest-posting-sites.com/blog/" target="_blank" class="blog-link">
+
 <div class="blog">
 
 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
@@ -563,8 +585,7 @@ Latest SEO Blog Posts
 <h3>
 Top Free Guest Posting Sites List for SEO in 2026
 </h3>
-  </a>
-  
+
 <p>
 Discover updated guest blogging websites with high DA and real traffic.
 </p>
@@ -572,6 +593,10 @@ Discover updated guest blogging websites with high DA and real traffic.
 </div>
 
 </div>
+
+</a>
+
+<!-- BLOG 2 -->
 
 <a href="https://www.guest-posting-sites.com/blog/" target="_blank" class="blog-link">
 
@@ -584,7 +609,7 @@ Discover updated guest blogging websites with high DA and real traffic.
 <h3>
 Best Blogger Outreach Strategy for Link Building
 </h3>
-</a>
+
 <p>
 Learn proven outreach techniques to earn natural backlinks and improve rankings.
 </p>
@@ -592,6 +617,10 @@ Learn proven outreach techniques to earn natural backlinks and improve rankings.
 </div>
 
 </div>
+
+</a>
+
+<!-- BLOG 3 -->
 
 <a href="https://www.guest-posting-sites.com/blog/" target="_blank" class="blog-link">
 
@@ -604,7 +633,7 @@ Learn proven outreach techniques to earn natural backlinks and improve rankings.
 <h3>
 High DA Backlink Sites to Improve Google Rankings
 </h3>
-</a>
+
 <p>
 Build authority backlinks from trusted websites and increase organic traffic.
 </p>
@@ -613,9 +642,13 @@ Build authority backlinks from trusted websites and increase organic traffic.
 
 </div>
 
-
+</a>
 
 </div>
+
+</div>
+
+</section>
 
 <h2 class="section-title">
 FAQ - Guest Posting Sites
